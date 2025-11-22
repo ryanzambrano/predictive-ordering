@@ -1,0 +1,8 @@
+Metric,Dataset_1,Dataset_2
+Total Rules,4,10000
+Avg Confidence,0.737,1.000
+Max Confidence,0.794,1.000
+Min Confidence,0.700,1.000
+Avg Lift,9.280,4.700
+Max Lift,10.580,50.000
+Avg Support,0.026,0.023

@@ -1,0 +1,7 @@
+Time_Segment,DS1_Rules,DS2_Rules,DS1_Avg_Confidence,DS2_Avg_Confidence
+Afternoon_Weekday,1,0,0.794,N/A
+Afternoon_Weekend,1,37,0.734,1.000
+Evening_Weekday,0,46,N/A,1.000
+Evening_Weekend,0,22,N/A,1.000
+Morning_Weekday,1,9895,0.720,1.000
+Morning_Weekend,1,0,0.700,N/A

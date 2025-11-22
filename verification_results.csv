@@ -1,0 +1,32 @@
+Category,Check,Status,Details
+Dataset 1,File loading,✓ PASS,"149,116 rows loaded"
+Dataset 1,Required columns,✓ PASS,All required columns present
+Dataset 1,Null products,✓ PASS,No null products
+Dataset 1,Results loading,✓ PASS,4 rules loaded
+Dataset 1,Rule structure,✓ PASS,All rule columns present
+Dataset 1,Confidence range,✓ PASS,Confidence in valid range
+Dataset 1,Support range,✓ PASS,Support in valid range
+Dataset 1,Lift values,✓ PASS,All lift values positive
+Dataset 1,Time segments,✓ PASS,Valid segments: 4
+Dataset 2,File loading,✓ PASS,"49,894 rows loaded"
+Dataset 2,Required columns,✓ PASS,All required columns present
+Dataset 2,Transaction count,✓ PASS,"4,203 unique transactions"
+Dataset 2,Line item integrity,✓ PASS,No duplicate line items
+Dataset 2,Results loading,✓ PASS,"6,034,209 rules loaded"
+Dataset 2,Confidence range,✓ PASS,Confidence in valid range
+Dataset 2,Support range,✓ PASS,Support in valid range
+Dataset 2,Lift values,✓ PASS,All lift values positive
+Dataset 2,Lift magnitude,✓ PASS,Max lift: 50.0
+Dataset 2,Confidence >= Support,✓ PASS,All rules satisfy this requirement
+Dataset 1,Lift calculation,✓ PASS,Lift values mathematically correct
+Dataset 2,Lift calculation,✓ PASS,Lift values mathematically correct (sample)
+Comparison,Report exists,✓ PASS,Report file found
+Comparison,Metrics file,✓ PASS,7 metrics compared
+Comparison,Category file,✓ PASS,10 categories compared
+Visualizations,Dataset 1 images,✓ PASS,6 images found
+Visualizations,Dataset 2 images,✓ PASS,3 images found
+Visualizations,Comparison images,✓ PASS,2 images found
+Spot Check,Apriori execution,✓ PASS,Generated 9 test rules
+Spot Check,Confidence calculation,⚠️  WARN,"Expected 1.00, got 0.75"
+Issues,Rule complexity DS1,✓ PASS,All rules are item pairs
+Issues,Rule complexity DS2,✓ PASS,1000/1000 are multi-item (sample)
