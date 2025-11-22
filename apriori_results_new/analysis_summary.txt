@@ -1,0 +1,107 @@
+================================================================================
+ASSOCIATION RULE MINING SUMMARY - NEW COFFEE SHOP DATASET
+================================================================================
+
+Analysis Date: 2025-11-21 19:58:46
+Dataset: April 2019 Sales Data
+
+CONFIGURATION:
+  - Minimum Support: 2.0%
+  - Minimum Confidence: 40.0%
+
+DATASET OVERVIEW:
+  - Total sales records: 49,894
+  - Unique transactions: 4,203
+  - Multi-item transactions: 3,059 (72.8%)
+  - Unique products: 80
+  - Date range: 2019-04-01 to 2019-04-29
+
+RESULTS:
+  - Total association rules: 6,034,209
+  - Average confidence: 0.588
+  - Average lift: 4.698
+  - Segments analyzed: 6
+
+TOP 20 HIGHEST CONFIDENCE RULES:
+
+1. [Afternoon_Weekend]
+   Cranberry Scone → Brazilian Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 11.250
+
+2. [Afternoon_Weekend]
+   Cappuccino Lg → Serenity Green Tea Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 11.250
+
+3. [Afternoon_Weekend]
+   Ethiopia Rg → Chocolate Chip Biscotti
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+4. [Afternoon_Weekend]
+   Our Old Time Diner Blend Rg → Columbian Medium Roast Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 9.000
+
+5. [Afternoon_Weekend]
+   Spicy Eye Opener Chai Rg → Columbian Medium Roast Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 9.000
+
+6. [Afternoon_Weekend]
+   Croissant → Columbian Medium Roast Rg
+   Confidence: 1.000 | Support: 0.022 | Lift: 11.250
+
+7. [Afternoon_Weekend]
+   Cranberry Scone → Peppermint Rg
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+8. [Afternoon_Weekend]
+   Dark chocolate Lg → Earl Grey Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 45.000
+
+9. [Afternoon_Weekend]
+   Earl Grey Lg → Dark chocolate Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 45.000
+
+10. [Afternoon_Weekend]
+   Lemon Grass Lg → Dark chocolate Rg
+   Confidence: 1.000 | Support: 0.022 | Lift: 22.500
+
+11. [Afternoon_Weekend]
+   English Breakfast Lg → Jamaican Coffee River Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+12. [Afternoon_Weekend]
+   Espresso shot → Jumbo Savory Scone
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+13. [Afternoon_Weekend]
+   Ethiopia Lg → Our Old Time Diner Blend Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 22.500
+
+14. [Afternoon_Weekend]
+   Spicy Eye Opener Chai Rg → Hazelnut Biscotti
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+15. [Afternoon_Weekend]
+   Jamaican Coffee River Sm → Serenity Green Tea Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 11.250
+
+16. [Afternoon_Weekend]
+   Scottish Cream Scone  → Serenity Green Tea Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 11.250
+
+17. [Afternoon_Weekend]
+   Serenity Green Tea Rg → Spicy Eye Opener Chai Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+18. [Afternoon_Weekend]
+   Traditional Blend Chai Lg → Sustainably Grown Organic Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 22.500
+
+19. [Afternoon_Weekend]
+   Peppermint Rg, Cranberry Scone → Brazilian Lg
+   Confidence: 1.000 | Support: 0.022 | Lift: 11.250
+
+20. [Afternoon_Weekend]
+   Brazilian Lg, Cranberry Scone → Peppermint Rg
+   Confidence: 1.000 | Support: 0.022 | Lift: 15.000
+
+================================================================================
