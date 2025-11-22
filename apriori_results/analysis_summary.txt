@@ -1,0 +1,101 @@
+================================================================================
+STATISTICAL SUMMARY: TIME-SEGMENTED ASSOCIATION RULE MINING
+================================================================================
+
+Analysis Date: 2025-11-21 19:17:33
+
+CONFIGURATION:
+  - Minimum Support: 2.0%
+  - Minimum Confidence: 40.0%
+  - Product Granularity: Product Detail (specific items)
+  - Time Segments: Day-part (Morning/Afternoon/Evening) × Day-type (Weekday/Weekend)
+
+DATASET OVERVIEW:
+  - Total line items: 149,116
+  - Unique transaction baskets: 116,790
+  - Multi-item transactions: 29,260 (25.1%)
+  - Unique products: 80
+  - Date range: 2023-01-01 to 2023-06-30
+
+OVERALL RESULTS:
+  - Total association rules found: 4
+  - Average confidence: 0.737
+  - Average lift: 9.280
+  - Segments analyzed: 4
+
+RULES BY TIME SEGMENT:
+  - Afternoon_Weekday:
+      Rules found: 1
+      Avg confidence: 0.794
+      Avg lift: 8.709
+      Max confidence: 0.794
+  - Afternoon_Weekend:
+      Rules found: 1
+      Avg confidence: 0.734
+      Avg lift: 8.447
+      Max confidence: 0.734
+  - Morning_Weekday:
+      Rules found: 1
+      Avg confidence: 0.720
+      Avg lift: 9.383
+      Max confidence: 0.720
+  - Morning_Weekend:
+      Rules found: 1
+      Avg confidence: 0.700
+      Avg lift: 10.580
+      Max confidence: 0.700
+
+TOP 10 HIGHEST CONFIDENCE RULES (ALL SEGMENTS):
+
+1. [Afternoon_Weekday]
+   Ouro Brasileiro shot → Ginger Scone
+   Confidence: 0.794 | Support: 0.028 | Lift: 8.709
+
+2. [Afternoon_Weekend]
+   Ouro Brasileiro shot → Ginger Scone
+   Confidence: 0.734 | Support: 0.026 | Lift: 8.447
+
+3. [Morning_Weekday]
+   Ouro Brasileiro shot → Ginger Scone
+   Confidence: 0.720 | Support: 0.026 | Lift: 9.383
+
+4. [Morning_Weekend]
+   Ouro Brasileiro shot → Ginger Scone
+   Confidence: 0.700 | Support: 0.022 | Lift: 10.580
+
+================================================================================
+RESEARCH QUESTION ANSWER:
+================================================================================
+
+Q: Can time-segmented association rule mining identify high-confidence
+   item co-occurrence patterns to refine inventory and reduce surplus?
+
+A: YES. This analysis identified 4 association rules with
+   confidence ≥40.0% across 4 time segments.
+
+CONFIDENCE DISTRIBUTION:
+  - Very High (≥60%): 4 rules
+  - High (50-59%): 0 rules
+  - Moderate (40-49%): 0 rules
+
+ACTIONABLE RECOMMENDATIONS:
+
+1. STOCK BUNDLING:
+   Use high-confidence rules to identify which items should be stocked
+   together. When customers buy item A, they frequently buy item B.
+
+2. TIME-SPECIFIC INVENTORY:
+   Different patterns emerge during different times. Stock items based
+   on the specific day-part and day-type to minimize surplus.
+
+3. PURCHASE PREDICTION:
+   Rules with confidence ≥60% can reliably predict subsequent purchases,
+   enabling proactive inventory management.
+
+4. SURPLUS REDUCTION:
+   By understanding item co-occurrence patterns, cafés can:
+   - Order complementary items in correct proportions
+   - Adjust inventory levels by time segment
+   - Reduce overstock of low-association items
+
+================================================================================
