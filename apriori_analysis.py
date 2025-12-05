@@ -17,8 +17,20 @@ from mlxtend.preprocessing import TransactionEncoder
 import os
 from pathlib import Path
 
-# Configuration
-DATASET_PATH = Path.home() / ".cache/kagglehub/datasets/alfiaziz003/coffee-shop-sales-dashboard-by-alfi-aziz/versions/1/Coffee Shop Sales Dashboard by Alfi Aziz.xlsx"
+# Configuration - Check local directory first, then kagglehub cache
+local_dataset = Path(__file__).parent / "Coffee Shop Sales Dashboard by Alfi Aziz.xlsx"
+kagglehub_dataset = Path.home() / ".cache/kagglehub/datasets/alfiaziz003/coffee-shop-sales-dashboard-by-alfi-aziz/versions/1/Coffee Shop Sales Dashboard by Alfi Aziz.xlsx"
+
+if local_dataset.exists():
+    DATASET_PATH = local_dataset
+elif kagglehub_dataset.exists():
+    DATASET_PATH = kagglehub_dataset
+else:
+    raise FileNotFoundError(
+        f"Dataset not found. Please ensure 'Coffee Shop Sales Dashboard by Alfi Aziz.xlsx' "
+        f"is in the same directory as this script, or download it from Kaggle."
+    )
+
 OUTPUT_DIR = Path("apriori_results")
 MIN_SUPPORT = 0.02  # 2%
 MIN_CONFIDENCE = 0.40  # 40%

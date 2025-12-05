@@ -1,0 +1,117 @@
+===============================================================================
+SUBMISSION PACKAGE PREPARATION NOTES
+===============================================================================
+
+IMPORTANT: The complete repository with all generated results exceeds 50MB
+due to large CSV output files. For submission, follow these guidelines:
+
+FILES TO INCLUDE IN SUBMISSION ZIP:
+===============================================================================
+
+REQUIRED FILES (Code & Documentation):
+✓ README.md                         - Complete instructions
+✓ requirements.txt                  - Python dependencies
+✓ SUBMISSION_NOTES.txt              - This file
+✓ run_analysis.py                   - Main runner script (SINGLE TRIGGER)
+✓ apriori_analysis.py              - Primary analysis (Dataset 1)
+✓ apriori_new_dataset.py           - Secondary dataset analysis (Dataset 2)
+✓ visualize_results.py             - Visualization generation
+✓ compare_datasets.py              - Cross-dataset comparison
+✓ Coffee Shop Sales Dashboard by Alfi Aziz.xlsx  - Primary dataset
+
+EXCLUDED FILES (Not necessary for submission):
+✗ explore_sales_data.py            - Data exploration only
+✗ explore_new_dataset.py           - Data exploration only
+✗ download_dataset.py              - Tiny utility, not needed
+✗ verify_analysis.py               - Verification only
+✗ explain_results.py               - Console output only
+
+OPTIONAL (Sample Results for Report):
+✓ verification_report.txt          - Example verification output
+✓ Sample images from visualizations/ (for your report)
+  - 5_combined_dashboard.png
+  - 6_inventory_recommendations.png
+
+FILES TO EXCLUDE (Generated Outputs - Can be Regenerated):
+✗ apriori_results/ (entire directory)
+✗ apriori_results_new/ (entire directory)
+✗ comparison_results/ (entire directory)
+✗ visualizations/ (most files, except samples for report)
+✗ visualizations_new/ (entire directory)
+✗ venv/ (virtual environment)
+✗ __pycache__/ (Python cache)
+✗ .git/ (git repository)
+
+===============================================================================
+HOW TO CREATE SUBMISSION ZIP:
+===============================================================================
+
+Option 1: Using the provided script (if available):
+    python3 create_submission_zip.py
+
+Option 2: Manual creation:
+    zip -r submission.zip \
+        *.py \
+        *.md \
+        *.txt \
+        requirements.txt \
+        "Coffee Shop Sales Dashboard by Alfi Aziz.xlsx" \
+        -x "*.pyc" \
+        -x "__pycache__/*" \
+        -x "venv/*" \
+        -x "apriori_results/*" \
+        -x "apriori_results_new/*" \
+        -x "comparison_results/*" \
+        -x "visualizations/*" \
+        -x "visualizations_new/*"
+
+Option 3: Using git archive (if repo is initialized):
+    git add -A
+    git archive -o submission.zip HEAD \
+        *.py *.md *.txt requirements.txt "Coffee Shop Sales Dashboard by Alfi Aziz.xlsx"
+
+===============================================================================
+INSTRUCTOR REQUIREMENTS:
+===============================================================================
+
+✓ Single-trigger execution: python3 run_analysis.py
+✓ Sequential execution without disruption
+✓ Real-time progress display
+✓ Adequate code comments
+✓ README with detailed instructions
+✓ All required libraries listed in requirements.txt
+✓ Code should run on instructor's machine
+✓ All results (visual and metric) are produced
+
+IMPORTANT: The instructor should run "python3 run_analysis.py" which will:
+1. Run primary dataset Apriori analysis → apriori_results/
+2. Generate all visualizations → visualizations/
+3. Run secondary dataset analysis and comparison → apriori_results_new/ and comparison_results/
+
+Estimated runtime: 5-10 minutes
+
+The single trigger executes 3 scripts sequentially:
+- apriori_analysis.py (primary analysis)
+- visualize_results.py (generate all figures/tables)
+- compare_datasets.py (cross-dataset comparison)
+
+===============================================================================
+EXPECTED SUBMISSION SIZE:
+===============================================================================
+
+With only code and documentation (no generated results): ~25-30 MB
+This is well under the 50 MB limit.
+
+The instructor will generate all results by running the code.
+
+===============================================================================
+VERIFICATION:
+===============================================================================
+
+Before submitting, verify:
+1. Extract your zip file to a fresh directory
+2. Follow the README.md installation instructions
+3. Run: python3 run_analysis.py
+4. Verify all outputs are generated successfully
+
+===============================================================================

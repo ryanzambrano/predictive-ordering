@@ -14,7 +14,24 @@ import os
 from pathlib import Path
 
 # Configuration
-DATASET_PATH = Path.home() / ".cache/kagglehub/datasets/ylchang/coffee-shop-sample-data-1113/versions/1"
+# Try to find dataset in kagglehub cache, download if not found
+kagglehub_cache = Path.home() / ".cache/kagglehub/datasets/ylchang/coffee-shop-sample-data-1113/versions/1"
+
+if not kagglehub_cache.exists():
+    print("Dataset not found in cache. Downloading from Kaggle...")
+    try:
+        import kagglehub
+        dataset_path = kagglehub.dataset_download("ylchang/coffee-shop-sample-data-1113")
+        DATASET_PATH = Path(dataset_path)
+        print(f"✓ Downloaded to: {DATASET_PATH}")
+    except Exception as e:
+        print(f"⚠️  Unable to download dataset: {e}")
+        print("This dataset will be skipped. Ensure you have kaggle credentials configured.")
+        print("See: https://github.com/Kaggle/kaggle-api#api-credentials")
+        raise
+else:
+    DATASET_PATH = kagglehub_cache
+
 OUTPUT_DIR = Path("apriori_results_new")
 MIN_SUPPORT = 0.02  # 2%
 MIN_CONFIDENCE = 0.40  # 40%
